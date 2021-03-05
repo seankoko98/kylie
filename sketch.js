@@ -19,9 +19,6 @@ var images = [];
 var button;
 var kylie = false;
 
-// User interaction
-var waitForMouse = true;
-
 // preload
 function preload () {
   images [0] = loadImage ('assets/kylie1.jpg');
@@ -49,7 +46,7 @@ function makeButton() {
   button = new Clickable();
   
   // set the image to be this PNG
-  button.text = "Start Process";
+  button.text = "Start Injections";
 
   // This would give it a white background
   button.color = "#FFFFFF";
@@ -64,11 +61,10 @@ function makeButton() {
 
   // Clickable callback functions, defined below
   button.onPress = buttonPressed;
-  // catButton.onHover = catButtonHover;
-  // catButton.onOutside = catButtonOnOutside;
 }
 
 function buttonPressed (){
+   simpleTimer.start();
    kylie = true; 
 }
 
@@ -83,7 +79,7 @@ function draw() {
     drawTimerText();
   }
 
-    if( simpleTimer.expired() ) {
+    if( simpleTimer.expired() && kylie == true ) {
       fill(255);
       text("Done", hMargin, 60 );
       image (images[1], 500, 100, 500, 700);
