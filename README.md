@@ -1,12 +1,12 @@
-## Empty Example for P5.js
-#### by Scott Kildall
+## Kylie Jenner button + timer 
+#### by Sean Ko 
 
 
 
 ### Overview
-This is a modified version of the p5.js Empty Example that simplifies the directory structure
+This is a simple and funny project using a timer and button function
 
 
 ### Technical Details
 
-Modify the sketch.js setup() and draw() functions and begin adding functions!
+There is a timer that gets set off by clicking the button. At the end of the timer, a new image is shown. 
